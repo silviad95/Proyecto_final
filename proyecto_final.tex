@@ -215,8 +215,57 @@ Por consiguiente, es necesario continuar los esfuerzos de investigación en los 
 
 \section{Anexo: Fórmulas}
 Con el objetivo de practicar la implementación de fórmulas en LaTeX, se ha creado esta sección aparte, ya que el tema tratado no implica el trabajo con fórmulas matemáticas.\\\\
-
-
+La {\bf esperanza matemática} es una medida característica de tendencia central, también denominada {\em esperanza matemática, media o valor esperado} y se denota como E[X], representa el valor promedio o centro de los valores que toma la variable. 
+\begin{itemize}
+	\item Se considera una variable discreta, X, que toma valores de $\mathbb{R}_x=\{x_1,x_2,\dots,x_k,\dots\}$ con probabilidades $\{p_1,p_2,\dots,p_k,\dots\}$. Se define la {\bf esperanza matemática} o media de la variable aleatoria X como
+	\begin{displaymath}
+	E[X]=\sum_{x_i\in R_x} x_ip_i
+	\end{displaymath} 
+	Si se considera una función real, $g(X)$, de la variable aleatoria X, definida para todos los valores de X, entonces se define la esperanza matemática de $g(X)$ como
+	\begin{displaymath}
+	E[g(X)]=\sum_{x_i\in R_x} g(x_i)p_i
+	\end{displaymath} 
+	\item Sea X una variable aleatoria continua con una función de densidad $f(x)$. Se define la {\bf esperanza matemática} o media de la variable aleatoria X como 
+	\begin{displaymath}
+	E[X]=\mu_x=\int_{-\infty}^{+\infty} \mathrm xf(x) \mathrm{d}x
+	\end{displaymath}
+	Si se considera una función real $g(X)$ de la variable aleatoria X, se define la esperanza matemática de  $g(X)$ como
+		\begin{displaymath}
+	E[g(X)]=\int_{-\infty}^{+\infty} \mathrm g(x)f(x) \mathrm{d}x
+	\end{displaymath}
+	\item Propiedades: sean {\em a, b y c,} constantes, y X e Y variables aleatorias, entonces
+	\begin{enumerate}
+		\item $E[c]=c$
+		\item $E[aX]=aE[X]$
+		\item $E[X+a]=E[X]+a$
+		\item $E[aX+b]=aE[X]+b$
+		\item $E[X+Y]=E[X]+E[Y]$
+		\item Si g(X) y h(X) son dos funciones de la variable aleatoria X, entonces
+		\begin{displaymath}
+		E[g(X)+h(X)]=E[g(X)]+E[h(X)]
+		\end{displaymath}	
+	\end{enumerate}
+\end{itemize} 
+Por su parte la {\bf varianza} es otra medida que mide la distancia cuadrática promedio a la media para representar la dispersión de una variable aleatoria en torno a su media y se representa por $Var[X]$ o $\sigma^2_X$. La raíz cuadrada es la {\bf desviación típica} y se denota como $\sigma_X$. Se define en general como:
+\begin{displaymath}
+\sigma^2_X=Var[X]=E[(X-E[X])^2]=E[X^2]+(E[X])^2
+\end{displaymath}
+\begin{itemize}
+\item Se define la varianza de una variable aleatoria X discreta como 
+\begin{displaymath}
+Var[X]=\sum_{i=1}^{k}(x_i-E[X])^2p_i=\sum_{i=1}^{k} x_i^2p_i-(E[X])^2
+\end{displaymath}
+\item Se define la varianza de una variable aleatoria continua como
+\begin{displaymath}
+Var[X]=\int_{-\infty}^{+\infty} \mathrm (x-E[X])^2f(x)\mathrm{d}x=\int_{-\infty}^{+\infty} \mathrm x^2f(x)\mathrm{d}x - (E[X])^2
+\end{displaymath}
+\item Propiedades: Sean a,b, constantes y X una variable aleatoria: 
+\begin{enumerate}
+	\item $Var[aX]=a^2Var[X]$
+	\item $Var[X + a]=Var[X]$
+	\item $Var[aX + b]=a^2Var[X]$
+\end{enumerate}
+\end{itemize}
 \bibliography{biblio_proyectofinal}
 \bibliographystyle{unsrt}		
 \end{document}
